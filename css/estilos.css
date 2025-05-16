@@ -9,12 +9,81 @@ body {
     padding-right: 35px;
     text-align: right;
     width: 140px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding-top: 8px;
+}
+
+.menu-opcoes {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .menu-opcoes ul {
     font-size: 15px;
 }
 
+.menu-opcoes ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
 .menu-opcoes a {
     color: #036;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+}
+
+.busca,
+.menu-departamentos {
+    font-weight: bold;
+    background-color: #dcdcdc;
+    text-transform: uppercase;
+    margin-right: 10px;
+    width: 230px;
+    float: left;
+}
+
+.busca h2,
+.busca form,
+.menu-departamentos h2 {
+    margin: 10px;
+}
+
+.menu-departamentos li {
+    background-color: white;
+    margin-bottom: 1px;
+    padding: 5px 10px;
+}
+
+.menu-departamentos a {
+    color: #333;
+    text-decoration: none;
+}
+
+.busca input[type=search] {
+    width: 170px;
+}
+
+.busca input {
+    vertical-align: middle;
+}
+
+.menu-departamentos {
+    clear: left;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.destaques {
+    margin-top: 10px;
 }
