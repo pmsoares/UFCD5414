@@ -1,3 +1,9 @@
+.produto-back{
+    background-color: #f2f2f2;
+    margin-top: 1em;
+    border-top: 2px solid #ccc;
+}
+
 .produto {
     color: #333;
     line-height: 1.3;
@@ -29,6 +35,7 @@
 .cores label img {
     display: block;
     max-width: 100%;
+    border: 2px solid #ccc;
 }
 
 .cores label::after {
@@ -86,6 +93,55 @@ label[for="azul"]::after {
     padding: 0.5em 1em;
     margin: 1em 0;
     border-radius: 5px;
+}
+
+.detalhes {
+    padding: 2em 0;
+}
+
+.detalhes h3 {
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+.detalhes p {
+    margin: 1em 0;
+    font-size: 1em;
+    line-height: 1.5;
+    max-width: 36em;
+}
+
+table {
+    border-spacing: 0.2em;
+    border-collapse: separate;
+}
+
+thead {
+    background-color: #999;
+}
+
+thead th {
+    font-weight: bold;
+    text-align: center;
+    padding: 0.3em 1em;
+}
+
+td {
+    padding: 0.3em;
+}
+
+tr:nth-child(2n) {
+    background-color: #ccc;
+}
+
+td:first-child {
+    font-style: italic;
+}
+
+@media (min-width: 500px) {
+    .detalhes {
+        font-size: 1.2em;
+    }
 }
 
 @media (min-width: 630px) {
