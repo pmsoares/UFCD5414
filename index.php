@@ -39,6 +39,7 @@ include_once("cabecalho.php");
         </nav>
     </section> <!-- fim .menu-departamentos-->
 
+    <a href="#" class="pause"></a>
     <img src="img/destaque-home.png" alt="Promoção: Big City Night">
 
 </section> <!-- fim .container . destaques -->
@@ -158,15 +159,28 @@ include_once("cabecalho.php");
 </section>
 
 <script>
-    var banners = ["img/destaque-home.png", "img/destaque-home-2.png"];
-    var bannerAtual = 0;
+    const banners = ["img/destaque-home.png", "img/destaque-home-2.png"];
+    let bannerAtual = 0;
+    let timer = setInterval(trocaBanner, 4000);
+    const img = document.querySelector(".destaques img");
+    const controlo = document.querySelector(".pause, .play");
 
     function trocaBanner() {
-        bannerAtual = (bannerAtual + 1) % 2;
-        document.querySelector(".destaques img").src = banners[bannerAtual];
+        bannerAtual = (bannerAtual + 1) % banners.length;
+        img.src = banners[bannerAtual];
     }
 
-    setInterval(trocaBanner, 4000);
+    controlo.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        if (controlo.classList.contains("pause")) {
+            clearInterval(timer);
+            controlo.classList.replace("pause", "play");
+        } else {
+            timer = setInterval(trocaBanner, 4000);
+            controlo.classList.replace("play", "pause");
+        }
+    });
 </script>
 
 <?php include("rodape.php"); ?>
