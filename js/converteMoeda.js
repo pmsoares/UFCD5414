@@ -1,7 +1,7 @@
-var numero = 9.9;
-var formatado = "R$ " + numero.toFixed(2).replace(".", ","); // "R$ 9,90"
-console.log(formatado);
+function numeroParaReal(numero) {
+    return "R$ " + numero.toFixed(2).replace(".", ",");
+}
 
-var texto = "R$ 120,35";
-var valor = parseFloat(texto.replace("R$ ", "").replace(",", ".")); // 120.35
-console.log(valor);
+function realParaNumero(texto) {
+    return parseFloat(texto.replace("R$ ", "").replace(",", "."));
+}
