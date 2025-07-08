@@ -50,7 +50,6 @@ include_once("cabecalho.php");
         <section class="painel novidades">
             <h2>Novidades</h2>
             <ol>
-                <!-- primeiro produto -->
                 <li>
                     <a href="produto.php">
                         <figure>
@@ -99,7 +98,57 @@ include_once("cabecalho.php");
                         </figure>
                     </a>
                 </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura1.png" alt="Produto1">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura2.png" alt="Produto2">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura3.png" alt="Produto3">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura4.png" alt="Produto4">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura5.png" alt="Produto5">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura6.png" alt="Produto6">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+
             </ol>
+            <button type="button">Mostrar mais</button>
         </section>
 
         <section class="painel mais-vendidos">
@@ -153,34 +202,62 @@ include_once("cabecalho.php");
                         </figure>
                     </a>
                 </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura7.png" alt="Produto7">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura8.png" alt="Produto8">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura9.png" alt="Produto9">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura10.png" alt="Produto10">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura11.png" alt="Produto11">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li>
+                    <a href="produto.php">
+                        <figure>
+                            <img src="img/produtos/miniatura12.png" alt="Produto12">
+                            <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
+                        </figure>
+                    </a>
+                </li>
+
             </ol>
+            <button type="button">Mostrar mais</button>
         </section>
     </div>
 </section>
 
-<script>
-    const banners = ["img/destaque-home.png", "img/destaque-home-2.png"];
-    let bannerAtual = 0;
-    let timer = setInterval(trocaBanner, 4000);
-    const img = document.querySelector(".destaques img");
-    const controlo = document.querySelector(".pause, .play");
-
-    function trocaBanner() {
-        bannerAtual = (bannerAtual + 1) % banners.length;
-        img.src = banners[bannerAtual];
-    }
-
-    controlo.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        if (controlo.classList.contains("pause")) {
-            clearInterval(timer);
-            controlo.classList.replace("pause", "play");
-        } else {
-            timer = setInterval(trocaBanner, 4000);
-            controlo.classList.replace("play", "pause");
-        }
-    });
-</script>
+<script src="js/jquery.js"></script>
+<script src="js/home.js"></script>
 
 <?php include("rodape.php"); ?>

@@ -61,6 +61,8 @@ include_once("cabecalho.php");
         Fashion, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
     </p>
 
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Tb06abHE4hY?si=Zo8-_4rFwmQzEY_e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
     <h2 id="diferenciais">Diferenciais</h2>
 
     <ul>
@@ -73,6 +75,8 @@ include_once("cabecalho.php");
         <li>Presente em 124 países</li>
         <li>Mais de um milhão de funcionários em todo o mundo</li>
     </ul>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58692.98225059368!2d-50.00953861341322!3d-23.158832443842055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c026544d26f253%3A0xc66dac11dad56f73!2sJacarezinho%2C%20PR%2C%2086400-000%2C%20Brasil!5e0!3m2!1spt-PT!2spt!4v1751974101061!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </section>
 
