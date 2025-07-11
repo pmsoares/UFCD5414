@@ -1,5 +1,9 @@
    <?php
-   $cabecalho_title = "Produto da Mirror Fashion";
+   require_once("connection.php");
+   $dados = mysqli_query($con, "SELECT * FROM produtos WHERE id = $_GET[id]");
+   $produto = mysqli_fetch_array($dados);
+
+   $cabecalho_title = $produto["nome"];
    $cabecalho_css = "<link rel='stylesheet' href='css/produto.css'>";
    include("cabecalho.php");
    ?>
@@ -7,30 +11,28 @@
    <div class="produto-back">
       <div class="container">
          <div class="produto">
-            <h2>Fuzzy Cardigan</h2>
-            <p>por apenas R$ 129,00</p>
+            <h2><?= $produto["nome"] ?></h2>
+            <p>por apenas <?= $produto["preco"] ?></p>
 
             <form action="checkout.php" method="post">
-               <input type="hidden" name="id" value="2">
-               <input type="hidden" name="nome" value="Fuzzy Cardigan">
-               <input type="hidden" name="preco" value="R$ 129,00">
+               <input type="hidden" name="id" value="<?= $produto["id"] ?>">
 
                <fieldset class="cores">
                   <legend>Escolha a cor:</legend>
 
                   <input type="radio" name="cor" id="verde" value="verde" checked>
                   <label for="verde">
-                     <img src="img/produtos/foto2-verde.png" alt="verde">
+                     <img src="img/produtos/foto<?= $produto["id"] ?>-verde.png" alt="verde">
                   </label>
 
                   <input type="radio" name="cor" id="rosa" value="rosa">
                   <label for="rosa">
-                     <img src="img/produtos/foto2-rosa.png" alt="rosa">
+                     <img src="img/produtos/foto<?= $produto["id"] ?>-rosa.png" alt="rosa">
                   </label>
 
                   <input type="radio" name="cor" id="azul" value="azul">
                   <label for="azul">
-                     <img src="img/produtos/foto2-azul.png" alt="azul">
+                     <img src="img/produtos/foto<?= $produto["id"] ?>-azul.png" alt="azul">
                   </label>
                </fieldset>
 
@@ -39,7 +41,7 @@
 
                   <input type="range" name="tamanho" id="tamanho"
                      min="36" max="46" value="42" step="2">
-                     <output for="tamanho" name="valortamanho">42</output>
+                  <output for="tamanho" name="valortamanho">42</output>
                </fieldset>
 
                <input type="submit" value="Comprar" class="comprar">
@@ -49,7 +51,7 @@
          <div class="detalhes">
             <h3>Detalhes do produto</h3>
 
-            <p>Esse é o melhor casaco de Cardigã que você já viu. Excelente material italiano com estampa desenhada pelos artesãos da comunidade de Krotor nas ilhas gregas. Compre já e receba hoje mesmo pela nossa entrega a jato.</p>
+            <p><?= $produto["descricao"] ?></p>
 
             <table>
                <thead>
